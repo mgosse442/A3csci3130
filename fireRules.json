@@ -2,8 +2,8 @@
   "rules": {
     ".read": "true",
     ".write": "true",
-    "contacts": {
-      "$contact": {
+    "businesses": {
+      "$business": {
         "number": {
           ".validate": "newData.isNumber() && newData.val().length == 9"
         },
@@ -11,12 +11,12 @@
           ".validate": "newData.isString() && newData.val().length >= 2 && newData.val().length <= 48"
         },
         "business": {
-          ".validate": "newData.isString() && newData.val().matches(/^(Fisher|Distributor|Processor|Fish Monger))"
+          ".validate": "newData.isString() && newData.val().matches(/^(Fisher|Distributor|Processor|Fish Monger)$/)"
         },
         "address": {
           ".validate": "newData.isString() && newData.val().length < 50"
         },
-        "prov/terr": {
+        "province": {
           ".validate": "newData.isString() && newData.val().matches(/^(AB|BC|MB|NB|NL|NS|NT|NU|ON|PE|QC|SK|YT)?$/)"
         }
       }
